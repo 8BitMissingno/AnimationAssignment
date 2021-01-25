@@ -11,7 +11,7 @@ class Timer {
         var current = Date.now();
         var delta = (current - this.lastTimestamp) / 1000;
         this.lastTimestamp = current;
-
+        // ..
         var gameDelta = Math.min(delta, this.maxStep);
         this.gameTime += gameDelta;
         return gameDelta;

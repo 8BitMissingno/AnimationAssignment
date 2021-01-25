@@ -10,7 +10,7 @@ class GameEngine {
         this.wheel = null;
         this.surfaceWidth = null;
         this.surfaceHeight = null;
-    };
+    }; 
 
     init(ctx) {
         this.ctx = ctx;
@@ -67,6 +67,9 @@ class GameEngine {
     };
 
     draw() {
+        // TODO: Update method so that entities is a priority queue which sorts
+        //       by layer to draw on
+
         this.ctx.clearRect(0, 0, this.ctx.canvas.width, this.ctx.canvas.height);
         for (var i = 0; i < this.entities.length; i++) {
             this.entities[i].draw(this.ctx);
